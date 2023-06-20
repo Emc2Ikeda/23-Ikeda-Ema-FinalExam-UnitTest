@@ -19,18 +19,18 @@ public class StringCalculatorTest {
         stringCalculator = null;
     }
 
-//    @Test
-//    public void addTest1() {
-//        int result = stringCalculator.add("1,1000");
-//        assertEquals(1,result);
-//    }
-//
-//    @Test
-//    public void addTest2() {
-//        Throwable exception = assertThrows(IllegalArgumentException.class, ()-> {
-//            stringCalculator.add("-1,5");
-//            }, "Negative number is not allowed.");
-//    }
+    @Test
+    public void addTest1() {
+        int result = stringCalculator.add("1,1000");
+        assertEquals(1,result);
+    }
+
+    @Test
+    public void addTest2() {
+        Throwable exception = assertThrows(IllegalArgumentException.class, ()-> {
+            stringCalculator.add("-1,5");
+            }, "Negatives not allowed.");
+    }
 
     @Test
     public void addTest3() {

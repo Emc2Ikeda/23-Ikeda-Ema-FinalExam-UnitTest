@@ -7,7 +7,14 @@ public class StringCalculator {
         } else {
             for (String number : numbersArray) {
                 if (!number.trim().isEmpty()) {
-                    returnValue+=Integer.parseInt(number.trim()); // If it is not a number, parseInt will throw an exception
+                    int num = Integer.parseInt(number.trim()); // number to add to returnValue. If it is not a number, parseInt will throw an exception
+                    if (num < 0) {
+                        throw new IllegalArgumentException();
+                    }
+                    // Add element of numbersArray if it is less than 1000.
+                    if (num < 1000) {
+                        returnValue+=num;
+                    }
                 }
             }
         }
